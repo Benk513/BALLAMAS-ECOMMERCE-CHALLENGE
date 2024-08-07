@@ -1,10 +1,14 @@
 import React from 'react'
 import Hero from './Hero'
+import Products from './Products'
+import Collections from './Collections'
 
 const Home = () => {
   return (
     <div>
-   <Hero/>
+      <Hero />
+      <Products />
+      <Collections/>
     </div>
   )
 }
