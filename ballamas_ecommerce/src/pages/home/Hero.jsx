@@ -1,7 +1,7 @@
  import Arrow from './../../assets/icons/arrow.svg'
 const Hero = () => {
   return (
-    <div className=" bg-my-image w-full h-[500px] bg-cover bg-center rounded-[52px] flex flex-col justify-center items-center text-center gap-4 relative z-20">
+    <div className=" bg-my-image w-full h-[500px] bg-cover bg-center rounded-[52px] flex flex-col justify-center items-center text-center gap-4 relative z-20 mt-10">
         <p className='text-baseline font-display text-b-white'>We bring new fashion to the world</p>
           <h1 className=" text-5xl font-chillax text-b-white w-4/5 ">DISCOVER THE LATEST FASHION TRENDS HERE</h1>
 
