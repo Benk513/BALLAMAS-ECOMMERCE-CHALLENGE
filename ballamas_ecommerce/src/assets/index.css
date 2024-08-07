@@ -8,4 +8,23 @@
 
 
 
+@layer base{
+
+    @font-face {
+        font-family: Chillax;
+        font-weight: 700;
+        src: url(/fonts/Chillax-Bold.woff2) format('woff2');
+    }
+
+}
+
+
+
+.logo{
+    -webkit-text-fill-color:transparent ;
+    -webkit-text-stroke-width:1px ;
+    -webkit-text-stroke-color: var(--b-black, #1D1D1D);
+    
+}
+
  

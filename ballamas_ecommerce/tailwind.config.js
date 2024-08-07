@@ -24,7 +24,8 @@ export default {
     },
 
     fontFamily: {
-      'display' : ['Archivo']
+      'display': ['Archivo'],
+      'body':['Chillax']
     },
     extend: {
       colors: {
@@ -37,8 +38,15 @@ export default {
        'b-purple':'#393158',
        'b-ocean':'#2A5259',
        'b-olive':'#706947',        
-      }
+      },
+      fontFamily: {
+        chillax:"'chillax', serif",
+      },
 
+      backgroundImage: {
+        'my-image' : "url('/heroBackground.jpg')",
+      },
+      
     },
   },
   plugins: [],
