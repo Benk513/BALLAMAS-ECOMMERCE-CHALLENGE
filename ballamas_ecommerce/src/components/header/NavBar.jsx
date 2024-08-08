@@ -85,7 +85,7 @@ const NavBar = () => {
    </div> */}
 
      {/* Side drawer box */}
-   <div className={toggle ? "fixed top-0 right-0 w-[330px] h-screen  z-10 duration-300" : "fixed top-0 right-[-100%] w-[300px] h-screen bg-white z-20 duration-300"}>
+   <div className={toggle ? "fixed top-0 right-0 w-[330px] h-screen  z-10 duration-300" : "fixed top-0 right-[-100%] w-[300px] h-screen bg-white z-999 duration-300"}>
      <span className="inline-block bg-nft-50 p-2 rounded-lg absolute right-5  top-5">
 
      <img src= {HamburgerClose} onClick={() => setToggle(!toggle)} className="cursor-pointer" size={20} />
