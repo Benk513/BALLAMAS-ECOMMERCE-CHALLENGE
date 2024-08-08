@@ -1,5 +1,6 @@
 import React from 'react'
 import Item from './Item'
+import Suggestions from './Suggestions'
 
 const ProductDetail = () => {
   return (

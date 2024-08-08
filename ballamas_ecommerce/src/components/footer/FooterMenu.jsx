@@ -5,9 +5,9 @@ const FooterMenu = () => {
    
     <div className="flex gap-10">
 
-    <div className="text-b-white">
-      <h2>Product</h2>
-      <ul>
+    <div >
+      <h2 className="text-b-white font-semibold">Product</h2>
+      <ul className='text-b-gray text-xs'>
         <li>Jacket</li>
         <li>T-shirt</li>
         <li>Jacket</li>
@@ -17,9 +17,9 @@ const FooterMenu = () => {
       </ul>
     </div>
 
-    <div className="text-b-white">
-      <h2>Categories</h2>
-      <ul>
+    <div  >
+      <h2 className="text-b-white font-semibold">Categories</h2>
+      <ul className='text-b-gray text-xs'>
         <li>Man</li>
         <li>Woman</li>
         <li>Kids</li>
@@ -29,9 +29,9 @@ const FooterMenu = () => {
       </ul>
     </div>
 
-    <div className="text-b-white">
-      <h2>Our Social Media</h2>
-      <ul>
+    <div >
+      <h2 className="text-b-white font-semibold">Our Social Media</h2>
+      <ul className='text-b-gray text-xs'>
         <li>Instagram</li>
         <li>Facebook</li>
         <li>Youtube</li>

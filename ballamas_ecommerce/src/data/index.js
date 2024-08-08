@@ -17,7 +17,7 @@ export const nav1 = [
     {
         "id": 4,
         "name": "Collection",
-        "url": "#",
+        "url": "#collection",
     },
 
 ]
@@ -40,7 +40,7 @@ export const nav2 = [
     {
         "id": 4,
         "name": `Cart ${10}`,
-        "url": "#",
+        "url": "/cart",
     },
 
 ]

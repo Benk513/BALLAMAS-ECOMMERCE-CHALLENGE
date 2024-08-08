@@ -1,4 +1,4 @@
-
+ import TrashIcon from './../../assets/icons/trash.svg'
 const Cart = () => {
   return (
     <section className="bg-white py-8 antialiased md:py-16">
@@ -13,37 +13,42 @@ const Cart = () => {
             
            
             <div className=" border-b border-t border-b-light-gray bg-white p-4     md:p-6">
-              <div className="space-y-1 md:flex md:items-center md:justify-between md:gap-6 md:space-y-0">
+              <div className="space-y-1 md:flex md:items-center md:justify-between md:gap-6 md:space-y-0  xl:justify-start">
                 <a href="#" className="w-20 shrink-0 md:order-1">
-                 <img src="/" alt="" />
+                 <img src="/product3.jpg" alt="" className="w-full h-[80px] bg-cover rounded-xl" />
                   
                 </a>
   
-                <label for="counter-input" className="sr-only">Choose quantity:</label>
+                  
+                  
                 <div className="flex items-center justify-between md:order-3 md:justify-end">
-                  <div className="flex items-center">
-                    <button type="button" id="decrement-button-5" data-input-counter-decrement="counter-input-5" className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md border border-gray-300 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100      ">
+                  <div className="flex items-center bg-gray-100 rounded-full px-2 py-2 ">
+                    <button type="button" id="decrement-button-5"   className= "cart-add-button">
                      -
                     </button>
-                    <input type="text" id="counter-input-5" data-input-counter className="w-10 shrink-0 border-0 bg-transparent text-center text-sm font-medium text-gray-900 focus:outline-none focus:ring-0  " placeholder="" value="3" required />
-                    <button type="button" id="increment-button-5" data-input-counter-increment="counter-input-5" className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md border border-gray-300 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100       ">
+                    <input type="text" id="counter-input-5"  className="w-10 shrink-0 border-0 bg-transparent text-center text-sm font-medium text-gray-900 focus:outline-none focus:ring-0  " placeholder="" value="3" required />
+                    <button type="button" className="cart-add-button">
                       +
                     </button>
-                  </div>
+                    </div>
+                    
+                    <span className=' ml-2 p-2  rounded-full bg-gray-100'><img src={TrashIcon} alt="" /></span>
                   <div className="text-end md:order-4 md:w-32">
                     <p className="text-base font-bold text-gray-900  ">$2,997</p>
                   </div>
                 </div>
   
-                <div className="w-full min-w-0 flex-1 space-y-4 md:order-2 md:max-w-md">
-                  <a href="#" className="text-base font-medium text-gray-900 hover:underline  ">APPLE iPhone 15 5G phone, 256GB, Gold</a>
+                <div className="w-full min-w-0 flex-1 flex-col space-y-6 md:order-2 md:max-w-md ">
+                  <a href="#" className="text-base font-medium text-gray-900 hover:underline  ">Tatum 2 Red Cement</a>
+                  <a href="#" className="text-base font-medium text-gray-900 hover:underline  ">Size: 15</a>
+      
   
                   <div className="flex items-center gap-4">
                    
   
-                    <button type="button" className="inline-flex items-center text-sm font-medium text-red-600 hover:underline  ">
+                    <button type="button" className="inline-flex items-center text-2xl font-display font-semibold text-b-black hover:underline  ">
                      
-                      Remove
+                      $100
                     </button>
                   </div>
                 </div>
@@ -79,7 +84,7 @@ const Cart = () => {
               </dl>
             </div>
   
-            <a href="#" className="w-full text-sm font-medium hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300   focus:ring-primary-800 btn-primary">Checkout now</a>
+            <a href="#" className="w-full text-sm font-medium hover:bg-b-dark-gray transition space-y-2 focus:outline-none focus:ring-4 focus:ring-primary-300   focus:ring-primary-800 btn-primary">Checkout now</a>
    
           </div>
   

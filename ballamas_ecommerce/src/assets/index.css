@@ -15,6 +15,21 @@
         font-weight: 700;
         src: url(/fonts/Chillax-Bold.woff2) format('woff2');
     }
+    @font-face {
+        font-family: Chillax;
+        font-weight: 500;
+        src: url(/fonts/Chillax-Regular.woff2) format('woff2');
+    }
+    @font-face {
+        font-family: Chillax;
+        font-weight: 500;
+        src: url(/fonts/Chillax-Medium.woff2) format('woff2');
+    }
+    @font-face {
+        font-family: Chillax;
+        font-weight: 600;
+        src: url(/fonts/Chillax-Semibold.woff2) format('woff2');
+    }
 
 }
 
@@ -36,18 +51,20 @@
 
 @layer components {
     .btn-primary {
-      @apply text-white  py-2 px-4 rounded-full font-display bg-b-black text-base font-normal;
+      @apply text-white  lg:py-2 px-4 rounded-full font-display bg-b-black text-base font-normal;
     }
 
     .btn-secondary{
-      @apply text-b-black  py-2 px-4 rounded-full font-display border-black  border-2 bg-b-white text-base font-normal;
+      @apply text-b-black py-1 px-1 lg:py-2 lg:px-4 rounded-full font-display border-black  border-2 bg-b-white text-base font-normal;
     }
-    
-    .btn-connectWallet{
-      @apply bg-nft-900 text-white py-[10px] px-[26px] rounded-full
-    }
+   
     .btn-hover{
       @apply hover:bg-nft-800 hover:text-white transition-all duration-300
+    }
+
+
+    .cart-add-button{
+      @apply h-5 w-5 shrink-0 border-b-black items-center justify-center rounded-full border text-center text-2xl  hover:bg-gray-200  transition duration-300 focus:outline-none focus:ring focus:ring-gray-100 inline-flex 
     }
 
 

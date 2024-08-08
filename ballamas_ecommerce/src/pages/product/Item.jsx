@@ -1,13 +1,14 @@
 import React from 'react'
+import Size from './Size'
 
 const Item = () => {
   return (
     <div>
-       <div className='flex justify-between gap-12 mt-20'>
-        <img src="/product1.jpg" alt="ded" className='h-[500px] rounded-3xl' />
+       <div className='lg:flex   gap-12 mt-5 lg:mt-20'>
+        <img src="/product1.jpg" alt="ded" className='lg:h-[500px] rounded-3xl' />
 
 
-        <div className=''>
+        <div className='mt-6 lg:mt-0'>
           <h1 className='font-chillax text-4xl font-semibold'>Badacore Tshirt</h1>
           <h2 className='font-display text-2xl mt-4 font-medium'>CAD $80</h2>
 
@@ -21,18 +22,11 @@ const Item = () => {
      
           </div>
 
-          <h3 className='font-display text-2xl mt-4' >Size:</h3>
-          <div className='gap-4 flex items-center'>
-            <span className=' btn-primary py-'>XS</span>
-            <span className='btn-secondary'>S</span>
-            <span className='btn-secondary'>M</span>
-            <span className='btn-secondary'>L</span>
-            <span className='btn-secondary'>XL</span>
-          </div>
+          <Size/>
 
-          <div className='mt-5 flex gap-3'>
-            <button className='btn-primary px-10'>BUY NOW</button>
-            <button className='btn-secondary px-10'>Add to Cart</button>
+          <div className='mt-5 flex w-full lg:w-1/2 justify-between gap-4'>
+            <button className='btn-primary py-2 px-0 w-full text-xs'>BUY NOW</button>
+            <button className='btn-secondary w-full  px-0 text-xs'>Add to Cart</button>
             
           </div>
 

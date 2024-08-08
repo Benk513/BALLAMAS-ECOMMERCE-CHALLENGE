@@ -20,12 +20,14 @@ function App() {
     <>
  <Header/>
     
-    <div className='container' >
+    <div className='container overflow-hidden' >
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/product" element={<ProductDetail />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/payment" element={<PaymentConfirmation />} />
          </Routes>
       </Router>
       </div>
