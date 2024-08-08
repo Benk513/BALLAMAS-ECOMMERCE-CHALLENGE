@@ -8,8 +8,8 @@ import Cart from './pages/cart/Cart'
 import ProductDetail from './pages/product/ProductDetail'; 
 import Checkout from './pages/checkout/Checkout';
 import PaymentConfirmation from './pages/payment/PaymentConfirmation';
-import Banner from './components/header/Banner';
-import Header from './components/header/Header';
+ import Header from './components/header/Header';
+import Footer from './components/footer/footer';
 
 
 
@@ -29,6 +29,7 @@ function App() {
          </Routes>
       </Router>
       </div>
+  <Footer/>
     </>
   )
 }

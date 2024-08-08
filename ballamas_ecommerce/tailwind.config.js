@@ -45,6 +45,8 @@ export default {
 
       backgroundImage: {
         'my-image' : "url('/heroBackground.jpg')",
+        'collection2' : "url('/collection2.jpg')",
+        'collection1' : "url('/collection1.jpg')",
       },
       
     },

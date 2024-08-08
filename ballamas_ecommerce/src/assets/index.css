@@ -26,5 +26,29 @@
     -webkit-text-stroke-color: var(--b-black, #1D1D1D);
     
 }
+.logo-white{
+    -webkit-text-fill-color:transparent ;
+    -webkit-text-stroke-width:1px ;
+    -webkit-text-stroke-color: var(--b-white, #FFF);
+    
+    
+}
 
- 
+@layer components {
+    .btn-primary {
+      @apply text-white  py-2 px-4 rounded-full font-display bg-b-black text-base font-normal;
+    }
+
+    .btn-secondary{
+      @apply text-b-black  py-2 px-4 rounded-full font-display border-black  border-2 bg-b-white text-base font-normal;
+    }
+    
+    .btn-connectWallet{
+      @apply bg-nft-900 text-white py-[10px] px-[26px] rounded-full
+    }
+    .btn-hover{
+      @apply hover:bg-nft-800 hover:text-white transition-all duration-300
+    }
+
+
+  }

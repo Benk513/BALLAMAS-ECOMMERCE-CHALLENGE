@@ -9,20 +9,22 @@ const NavBar = () => {
     return (
       
         <>       
-      <div className="container hidden lg:flex border-b-light-gray border-b-4">
-           <ul>
+      <nav className="container hidden lg:flex border-b-light-gray border-b justify-between py-5">
+        <ul className="flex gap-5">
           {nav1.map((el) => {
               return (
                  
-                      <li key={el.id}>{el.name}</li>
+                <li key={el.id}>{el.name}</li>
                  
               )
                   
           })}
            </ul>
           <Logo />
-          
-          <ul>
+
+            <div className="flex items-center gap-4">
+                    
+            <ul className=" flex gap-5">
           {nav2.map((el) => {
               return (
                  
@@ -36,9 +38,13 @@ const NavBar = () => {
           <img src={SearchIcon} alt="" />
           
 
+                </div>
+          
+       
+
 
      
-      </div>
+      </nav>
       
             
             {/* Mobile Menu */}
