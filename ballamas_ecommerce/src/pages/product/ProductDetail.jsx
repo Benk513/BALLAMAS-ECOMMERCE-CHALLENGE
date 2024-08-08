@@ -1,9 +1,13 @@
 import React from 'react'
+import Item from './Item'
 
 const ProductDetail = () => {
   return (
-    <div>
-      <h1>Product in Detail </h1>
+    <div >
+      <Item />
+      
+      <Suggestions/>
+       
     </div>
   )
 }
