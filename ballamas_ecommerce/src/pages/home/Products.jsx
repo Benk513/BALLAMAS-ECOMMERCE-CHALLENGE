@@ -8,23 +8,28 @@ const Products = () => {
 
   const [products, setProducts] = useState([])
   const [isLoading, setIsLoading] = useState(false)
+  const [errorr, setErrorr] = useState()
    
   
-  useEffect(() => {
-  
+  useEffect(() => { 
 
     const fetchProducts = async () => {
 
- 
       setIsLoading(true)
 
-      const request = await fetch('https://mock.shop/api?query={products(first:%2020){edges%20{node%20{id%20title%20description%20featuredImage%20{id%20url}%20variants(first:%203){edges%20{node%20{price%20{amount%20currencyCode}}}}}}}}')
+      try {
+    const request = await fetch('https://mock.shop/api?query={products(first:%2020){edges%20{node%20{id%20title%20description%20featuredImage%20{id%20url}%20variants(first:%203){edges%20{node%20{price%20{amount%20currencyCode}}}}}}}}')
       const response = await request.json();
       console.log(response.data.products.edges);
       setProducts(response.data.products.edges);
-
-      setIsLoading(false)
         
+      } catch (error) {
+        console.log(error)
+        setErrorr(error)
+      }
+      finally {
+          setIsLoading(false)
+      }    
       
     }
     fetchProducts()
@@ -35,7 +40,13 @@ const Products = () => {
 
   if (isLoading) {
     return (
-      <div className='bg-orange-500 h-screen w-full'>Loading...</div>
+      <div className='bg-yellow-500 h-screen w-full'>Loading...</div>
+    )
+    
+  }
+  if (errorr) {
+    return (
+      <div className='bg-red-500 h-screen w-full'>Oups !! il ya une erreur de lors de l'appel de données...</div>
     )
     
   }
@@ -47,10 +58,7 @@ const Products = () => {
           <h1 className='text-2xl lg:text-4xl'>Discover the latest trends in summer fashion. Shop now and refresh your wardrobe with our stylish summer shirts.</h1>
       
           
-          <FilterButtons />
-          
-    
-      
+          <FilterButtons />       
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6'>
         
 
