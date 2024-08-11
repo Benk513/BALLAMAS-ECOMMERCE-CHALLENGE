@@ -69,3 +69,19 @@
 
 
   }
+
+
+
+  /* for the text line in the hero section */
+ .slug { 
+    display: flex; 
+    flex-direction: row; 
+} 
+  
+.slug:before, 
+.slug:after { 
+    content: " "; 
+    flex: 1 1; 
+    border-bottom: 2px solid #fff; 
+    margin: auto; 
+} 
