@@ -7,7 +7,7 @@ const FooterMenu = () => {
 
     <div >
       <h2 className="text-b-white font-semibold">Product</h2>
-      <ul className='text-b-gray text-xs'>
+      <ul className='text-b-gray text-xs lg:text-base' >
         <li>Jacket</li>
         <li>T-shirt</li>
         <li>Jacket</li>
@@ -19,7 +19,7 @@ const FooterMenu = () => {
 
     <div  >
       <h2 className="text-b-white font-semibold">Categories</h2>
-      <ul className='text-b-gray text-xs'>
+      <ul className='text-b-gray text-xs lg:text-base'>
         <li>Man</li>
         <li>Woman</li>
         <li>Kids</li>
@@ -31,7 +31,7 @@ const FooterMenu = () => {
 
     <div >
       <h2 className="text-b-white font-semibold">Our Social Media</h2>
-      <ul className='text-b-gray text-xs'>
+      <ul className='text-b-gray text-xs lg:text-base'>
         <li>Instagram</li>
         <li>Facebook</li>
         <li>Youtube</li>

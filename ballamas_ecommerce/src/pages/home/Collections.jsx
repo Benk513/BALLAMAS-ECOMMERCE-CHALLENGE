@@ -3,6 +3,9 @@ import Arrow from './../../assets/icons/arrow.svg'
 const Collections = () => {
   return (
     <section className='text-center mt-20' id='collection'>
+      
+
+    
           <h1 className='text-3xl font-semibold uppercase font-chillax'>Our Collection</h1>
           <p className='font-display text-b-dark-gray'>Our latest collection, where classic and contemporary styles converge in perfect harmony.</p>
 

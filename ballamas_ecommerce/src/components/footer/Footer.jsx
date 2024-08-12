@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-b-black  py-8 mt-20 w-full">
 
-      <div className="container flex-col  lg:flex-row justify-between gap-3   ">
+      <div className="container flex flex-col  lg:flex-row justify-between gap-3   ">
         
         <div className="gap-3">
           <div>

@@ -1,14 +1,14 @@
 import FilterButtons from './FilterButtons'
 import {useState , useEffect} from 'react'
 import Product from './Product'
-
-const BASE_URL = ''
-
+  
 const Products = () => {
 
   const [products, setProducts] = useState([])
   const [isLoading, setIsLoading] = useState(false)
   const [errorr, setErrorr] = useState()
+
+ 
    
   
   useEffect(() => { 
@@ -20,7 +20,8 @@ const Products = () => {
       try {
     const request = await fetch('https://mock.shop/api?query={products(first:%2020){edges%20{node%20{id%20title%20description%20featuredImage%20{id%20url}%20variants(first:%203){edges%20{node%20{price%20{amount%20currencyCode}}}}}}}}')
       const response = await request.json();
-      console.log(response.data.products.edges);
+        console.log(response.data.products);
+   
       setProducts(response.data.products.edges);
         
       } catch (error) {
@@ -40,13 +41,13 @@ const Products = () => {
 
   if (isLoading) {
     return (
-      <div className='bg-yellow-500 h-screen w-full'>Loading...</div>
+      <div>Loading...</div>
     )
     
   }
   if (errorr) {
     return (
-      <div className='bg-red-500 h-screen w-full'>Oups !! il ya une erreur de lors de l'appel de données...</div>
+      <div className='bg-red-500 h-screen w-full'>Oups !! il ya une erreur de lors de  appel de données...</div>
     )
     
   }
@@ -54,8 +55,8 @@ const Products = () => {
 
 
   return (
-      <div className='text-center font-chillax text-3xl mt-[72px]'>
-          <h1 className='text-2xl lg:text-4xl'>Discover the latest trends in summer fashion. Shop now and refresh your wardrobe with our stylish summer shirts.</h1>
+      <div className='text-center font-chillax text-3xl mt-[130px]'>
+          <h1 className='text-2xl lg:text-4xl lg:font-bold'>Discover the latest trends in summer fashion. Shop now and refresh your wardrobe with our stylish summer shirts.</h1>
       
           
           <FilterButtons />       

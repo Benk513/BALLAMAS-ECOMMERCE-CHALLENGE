@@ -53,17 +53,17 @@ const NavBar = () => {
             {/* Mobile Menu */}
             
             
-            <div className=" w-[375px] mx-auto  bg-white flex justify-between lg:hidden border-b-light-gray border-b-2 py-4">
+            <div className=" w-[375px]  mx-auto  bg-white flex justify-between   lg:hidden border-b-light-gray border-b-2 py-4">
                 
                 <img src= {toggle ? HamburgerClose :HamburgerIcon}  alt=""  onClick={() => setToggle(!toggle)} className="cursor-pointer" size={20}/>
                       
                 <Logo />
-                <span className="flex justify-between items-center gap-1">               
+                <div className="flex items-center justify-end gap-  ">               
           
                 <img src={SearchIcon} alt="" width={20}/>               
               
                <a href="/cart"><img src= {CartIcon} alt="" width={20} />   </a>        
-                </span>
+                </div>
                 
         
         

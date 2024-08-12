@@ -1,10 +1,11 @@
 import RightArrow from './../../assets/icons/arrow-right.svg'
+import Bank from './../../assets/icons/bank.svg'
+import Card from './../../assets/icons/card.svg'
 
 import Order from './Order'
 import Discount from './Discount'
 import Shipment from './Shipment'
-import Input from '../../components/ui/Input'
-
+ 
 const Checkout = () => {
   return (
     <div className='my-10'>
@@ -52,37 +53,131 @@ const Checkout = () => {
 
 
 
-
-
-
         <div className='w-full '>
-          <h2 className='font-display text-xl font-semibold mt-8'>Product Detail</h2>
-          <h3 className='text-b-dark-gray'>Complete your purchase by providing your payment details.</h3>
+           <h2 className='font-display text-xl font-semibold mt-8'>Product Detail</h2>
+         <h3 className='text-b-dark-gray'>Complete your purchase by providing your payment details.</h3>
 
           <h2 className='font-display text-xl font-semibold mt-4 mb-3'>Shipping Address</h2>
 
           
           <div className='grid grid-cols-2 gap-4 w-full'>
 
-          <Input/>
-          <Input/>
-          <Input/>
-          <Input/>
-          <Input/>
-          <Input/>
-          <Input/>
-          <Input/>
+       
+          <div className='flex-col'>
+                
+                <label htmlFor="firstName" className='font-display text-lg '>First Name</label>
+                <div>
+                <input type="text" name="firstName" id="" placeholder='Enter your first name' className='font-display text-md border rounded-full border-b-black px-4 py-2 w-[250px]' />
+                </div>
+            </div>
+            
+
+          <div className='flex-col'>
+                
+                <label htmlFor="firstName" className='font-display text-lg '>Last Name</label>
+                <div>
+                <input type="text" name="firstName" id="" placeholder='Enter your last name' className='font-display text-md border rounded-full border-b-black px-4 py-2 w-[250px]' />
+                </div>
+          </div>
+            
+
+          <div className='flex-col'>
+                
+                <label htmlFor="firstName" className='font-display text-lg '>Email address</label>
+                <div>
+                <input type="text" name="firstName" id="" placeholder='Enter your email address' className='font-display text-md border rounded-full border-b-black px-4 py-2 w-[250px]' />
+                </div>
+            </div>
+            
+
+          <div className='flex-col'>
+                
+                <label htmlFor="firstName" className='font-display text-lg '>Phone Number</label>
+                <div>
+                <input type="text" name="firstName" id="" placeholder='Enter your phone number' className='font-display text-md border rounded-full border-b-black px-4 py-2 w-[250px]' />
+                </div>
+          </div>
+            
+
+
+
+       
+          <div className='flex-col'>
+                
+                <label htmlFor="firstName" className='font-display text-lg '>Address Name</label>
+                <div>
+                <input type="text" name="firstName" id="" placeholder='Enter your address' className='font-display text-md border rounded-full border-b-black px-4 py-2 w-[250px]' />
+                </div>
+            </div>
+            
+
+          <div className='flex-col'>
+                
+                <label htmlFor="firstName" className='font-display text-lg '>City</label>
+                <div>
+                <input type="text" name="firstName" id="" placeholder='Enter your city' className='font-display text-md border rounded-full border-b-black px-4 py-2 w-[250px]' />
+                </div>
+          </div>
+            
+
+          <div className='flex-col'>
+                
+                <label htmlFor="firstName" className='font-display text-lg '>Region  </label>
+                <div>
+                <input type="text" name="firstName" id="" placeholder='Select region' className='font-display text-md border rounded-full border-b-black px-4 py-2 w-[250px]' />
+                </div>
+            </div>
+            
+
+          <div className='flex-col'>
+                
+                <label htmlFor="firstName" className='font-display text-lg '>Postal Code  </label>
+                <div>
+                <input type="text" name="firstName" id="" placeholder='Enter your postal code' className='font-display text-md border rounded-full border-b-black px-4 py-2 w-[250px]' />
+                </div>
+          </div>
+            
+
+
+
+
           </div>
 
 
 
           <h2 className='font-display text-xl font-semibold mt-10 mb-3'>Select payment method</h2>
-          <div className='grid grid-cols-2 gap-4 w-full'>
+          <div className='flex flex-wrap gap-x-2 '>
+          
+          <div className='flex flex-col items-start gap-2 justify-center mb-4 border h-[80px] border-b-black rounded-2xl  px-4 w-2/5 ' >
+              <img src={Card} alt="ee" />
+               <p>Debit/Credit Card</p>
+              
+            </div>
+          <div className='flex flex-col items-start gap-2 justify-center mb-4 border h-[80px] border-b-black rounded-2xl  px-4 w-1/2'>
+              <img src={Bank} alt="ee" />
+               <p>Virtual account</p>
+              
+            </div>
+            
 
-<Input/>
-<Input/>
-<Input/>
-            <Input />
+            <div className='flex-col flex-2   w-full mb-4'>
+           
+              
+                <input type="text" name="firstName" id="" placeholder='Card number' className='font-display text-md border rounded-full border-b-black px-4 py-2 w-[100%]' />
+                
+            </div>
+            <div className='flex-col w-2/5 mr-4'>
+              
+                <input type="text" name="firstName" id="" placeholder='Enter your postal code' className='font-display text-md border rounded-full border-b-black px-4 py-2 w-[100%]' />
+                
+            </div>
+            
+            <div className='flex-col w-2/5 '>
+                         
+                <input type="text" name="firstName" id="" placeholder='Security code  ' className='font-display text-md border rounded-full border-b-black px-4 py-2 w-[100%]' />
+                 
+          </div>
+
             
  
           </div>
@@ -92,10 +187,7 @@ const Checkout = () => {
            </span>
             
             <button className='btn-primary px-20 flex items-center gap-4'> Pay $524.00 <img src= {RightArrow} alt="ff" /></button>
-     
- 
-
-
+  
         
         </div>
         

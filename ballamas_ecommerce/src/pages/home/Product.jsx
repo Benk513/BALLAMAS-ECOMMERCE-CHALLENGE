@@ -1,4 +1,5 @@
- 
+import { Link } from "react-router-dom"
+ import Cart from "./../../assets/icons/cart.svg"
 const Product = ({ item }) => {
 
   //object destructuring
@@ -8,15 +9,28 @@ const Product = ({ item }) => {
   
   console.log(amount)
   return (
-    <div className="text-start relative">
-      <a href="#" className="group relative mb-2 block h-100 overflow-hidden rounded-lg bg-gray-100 lg:mb-3 ">
-          <img src={ urlImage} alt="product image" className="rounded-[32px] object-cover transition duration-300 group-hover:scale-110 h-full w-full" loading="lazy" /></a>
+    <div className="text-start  relative overflow-hidden ">
+      <a href="#" className="group relative mb-2 block h-100 overflow-hidden  bg-gray-100 lg:mb-3 ">
+        <img src={urlImage} alt="product image" className="rounded-2xl   object-cover transition duration-300 group-hover:scale-110 h-full w-full hover:bg-black/80 hover:brightness-75" loading="lazy" /></a>
+      
           <h2 className="font-display mt-4 text-xl lg:text-2xl">{title} </h2>
       <p className="text-b-dark-gray text-xl lg:text-xl font-display">CAD {amount}</p>
 
+        
+      <div className="absolute  lg:text-base grid grid-cols-2 gap-1 opacity-0 left-0 w-full bottom-1/4 hover:opacity-100 transition-all p-5 text-xs   ">
+        <button className={"px-5 py-3 gap-1.5 bg-b-white rounded-full flex items-center "}> 
+          <img src={Cart} alt="" />
+              ADD TO CART 
+            </button>
+      
+          <button className="px-5 py-3 bg-transparent border rounded-full  border-b-white text-b-white  "
+          >
+            BUY NOW
+          </button>
+        </div>
 
- 
-{/* get 20% reduction for every product over 100 cad */}
+
+    {/* get 20% reduction for every product over 100 cad */}
       {amount > 100 ?
         <div className="absolute top-5 left-5 ">
               <p className="bg-b-white rounded-full px-2 py-2  lg:px-4 lg:py-2 text-xs lg:text-base font-display font-bold">
@@ -24,9 +38,7 @@ const Product = ({ item }) => {
               Get OFF 20%
           </p>
       </div> :''}
-  
-        
-      
+
     </div>
   )
 }
