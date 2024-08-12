@@ -13,35 +13,39 @@ const NavBar = () => {
     return (
       
         <>       
-      <nav className="container hidden lg:flex border-b-light-gray border-b justify-between py-5">
+        <nav className=" overflow-hidden w-[375px] lg:w-[1440px] mx-auto  hidden lg:flex border-b-light-gray border-b justify-between py-5">
+         
+        
+          {/* First Navigation */}
+          
         <ul className="flex gap-5 relative">
           {nav1.map((el) => {
-              return (
-                 
+              return (                 
                 <li key={el.id}><a href={el.url} >{el.name} </a></li>
-                 
-              )
-                  
+              )    
           })}
-           </ul>
+            
+          </ul>
+          {/* Logo in the middle */}
+
           <Logo />
 
-            <div className="flex items-center gap-4">
+
+          <div className="flex items-center gap-4">
                     
             <ul className=" flex gap-5">
-          {nav2.map((el) => {
-              return (
-                 
-                      <li key={el.id}><a href={el.url} >{el.name} </a></li>
-                 
-              )
-                  
-          })}
-          </ul>
-
-          <img src={SearchIcon} alt="" />
+            {nav2.map((el) => {
+                return (
+          <li key={el.id}><a href={el.url} >{el.name} </a></li>
+                  )
+                    
+            })}
+            
+            </ul>
+            
+              <img src={SearchIcon} alt="" />
         
-                </div>
+            </div>
   
       </nav>
       
@@ -49,24 +53,18 @@ const NavBar = () => {
             {/* Mobile Menu */}
             
             
-            <div className="container  bg-white flex justify-between lg:hidden border-b-light-gray border-b-4">
+            <div className=" w-[375px] mx-auto  bg-white flex justify-between lg:hidden border-b-light-gray border-b-2 py-4">
                 
-                <img src= {HamburgerIcon}  alt=""  onClick={() => setToggle(!toggle)} className="cursor-pointer" size={20}/>
+                <img src= {toggle ? HamburgerClose :HamburgerIcon}  alt=""  onClick={() => setToggle(!toggle)} className="cursor-pointer" size={20}/>
                       
                 <Logo />
-                <span className="flex justify-between gap-1">
-                
+                <span className="flex justify-between items-center gap-1">               
           
-                <img src={SearchIcon} alt="" />
-                
+                <img src={SearchIcon} alt="" width={20}/>               
               
-                <img src= {CartIcon} alt="" />
-          
+               <a href="/cart"><img src= {CartIcon} alt="" width={20} />   </a>        
                 </span>
-                  
-
                 
-       
         
         
    {/* Navigation Sidebar */}
@@ -85,10 +83,10 @@ const NavBar = () => {
    </div> */}
 
      {/* Side drawer box */}
-   <div className={toggle ? "fixed top-0 right-0 w-[330px] h-screen  z-10 duration-300" : "fixed top-0 right-[-100%] w-[300px] h-screen bg-white z-999 duration-300"}>
+   <div className={toggle ? "fixed left-0 bottom-[0%] w-full   z-10 duration-500 ease-in-out" : "fixed left-0 w-full bottom-[100%]  bg-white z-999 duration-500 ease-in-out"}>
      <span className="inline-block bg-nft-50 p-2 rounded-lg absolute right-5  top-5">
 
-     <img src= {HamburgerClose} onClick={() => setToggle(!toggle)} className="cursor-pointer" size={20} />
+    
      </span>
 
      {/* Side Drawer Navigation */}
@@ -96,18 +94,10 @@ const NavBar = () => {
 
      {/* Side Navigation drawer buttons */}
 
-     <div className="lg:hidden   gap-5 items-start mt-[40px] ml-[26px] ">        
-               
-                <span className="flex justify-between gap-1">
+     <div className="lg:hidden flex flex-col justify-center text-center gap-4 items-center text-xl mt-[20px] ml-[26px] ">        
                 
-                <Logo />          
-                <img src={SearchIcon} alt="" />               
-              
-                <img src= {CartIcon} alt="" />
-          
-                </span>
 
-                <ul className="text-center gap-5 mb-5">
+                <ul className="flex flex-col gap-4  ">
           {nav1.map((el) => {
               return (
                  
@@ -118,7 +108,7 @@ const NavBar = () => {
                 </ul>
               
                            
-            <ul className=" text-center gap-5">
+            <ul className="  flex flex-col gap-4    ">
           {nav2.map((el) => {
               return (
                  
@@ -127,7 +117,12 @@ const NavBar = () => {
               )
                   
           })}
-          </ul>
+                </ul>
+                
+                <ul className="flex flex-col gap-4  " >
+                  <li>FAQs</li>
+                  <li>Contact Us</li>
+                </ul>
 
 
                   
